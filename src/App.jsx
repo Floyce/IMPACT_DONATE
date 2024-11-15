@@ -5,10 +5,12 @@ import Home from './pages/Home';
 import Charities from './pages/Charities';
 import Donation from './pages/Donation';
 import TransactionHistory from './pages/TransactionHistory';
-
+import Navbar from './components/navbar.jsx';
+import Footer  from './components/footer.jsx';
 function App() {
   return (
     <Router>
+      <Navbar />
       <nav>
         <Link to="/">Home</Link> | <Link to="/charities">Charities</Link> |{' '}
         <Link to="/donation">Donation</Link> | <Link to="/transaction-history">Transaction History</Link>
@@ -19,6 +21,7 @@ function App() {
         <Route path="/donation" element={<Donation />} />
         <Route path="/transaction-history" element={<TransactionHistory />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
