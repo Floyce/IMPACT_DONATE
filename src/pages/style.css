@@ -1,0 +1,345 @@
+
+/* Basic Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #f5f5f5;
+color: #333;
+}
+
+/* Header and Navigation */
+header {
+background-color: #2F4F4F; /* Dark color to match branding */
+padding: 15px 2px;
+}
+
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo img {
+max-width: 100px;
+height: auto;
+border-radius: 50%;
+filter: drop-shadow(2px 4px 6px rgba(117, 117, 117, 0.3));
+box-shadow: 2px 4px 6px rgba(112, 112, 112, 0.2);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+font-size: 30px;
+gap: 2cm;
+}
+
+nav ul li a {
+text-decoration: none;
+color: #fff; /* White color for nav links */
+font-weight: bold;
+font-size: 1rem;
+transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+color: #32CD32; /* Light green on hover */
+}
+
+/* Slideshow Section */
+.slides {
+display: flex;
+overflow: hidden;
+padding: 20px 0;
+}
+
+.slides div {
+flex: 1;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.slides img {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+}
+
+/* Donate Section */
+.donate {
+padding: 40px 20px;
+background-color: #ffffff;
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+.donate h2 {
+color: #1D1D1D; /* Dark text color for heading */
+font-size: 2rem;
+margin-bottom: 15px;
+}
+
+.donate p {
+font-size: 1.1rem;
+margin-bottom: 20px;
+color: #555;
+}
+
+.donate button {
+padding: 10px 20px;
+font-size: 1.1rem;
+font-weight: bold;
+color: #fff;
+background-color: #32CD32; /* Green for the donate button */
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.donate button:hover {
+background-color: #28a745; /* Darker green on hover */
+}
+/* Footer Styling */
+footer {
+background-color: #1e1e1e;
+color: #ffffff;
+padding: 40px 20px;
+font-family: Arial, sans-serif;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 20px;
+}
+
+.footer-logo,
+.footer-links,
+.footer-contact {
+flex: 1 1 200px;
+max-width: 300px;
+}
+
+.footer-logo img {
+width: 80px;
+margin-bottom: 15px;
+border-radius: 50%;
+box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer-logo p {
+font-size: 14px;
+color: #b5b5b5;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.footer-links ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-links ul li {
+margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+color: #ffffff;
+text-decoration: none;
+font-size: 14px;
+transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+color: #00b894;
+}
+
+.footer-contact p {
+font-size: 14px;
+margin: 8px 0;
+}
+
+.social-icons{
+display: inline-block;
+margin-right: 10px;
+width: 24px;
+transition: transform 0.3s;
+}
+
+.social-icons:hover {
+transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid #333;
+font-size: 12px;
+color: #777;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+gap: 10px;
+}
+
+.logo img {
+max-width: 80px;
+}
+
+header {
+padding: 10px;
+}
+
+nav ul li a {
+font-size: 0.9rem;
+}
+
+    /* Basic Style for the Slides Section */
+.slides {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+gap: 10px;
+padding: 20px;
+scroll-snap-type: x mandatory;
+}
+
+.slide-list ul li a {
+width: 400px;
+display: block;
+padding: 18px;
+border-radius: 12px;
+text-decoration: none;
+}
+
+
+.slides div {
+flex: 0 0 auto;
+scroll-snap-align: start;
+}
+
+.slide-list li a img {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+transform: scale(0.95);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.slide-list li {
+list-style: none;
+}
+
+.slide-list a {
+margin: 16px 0 18px;
+padding: 8px 16px;
+font-size: 0.95rem;
+font-weight: 500;
+width: fit-content;
+border-radius: 50px;
+}
+
+/* Zoom Animation on Hover */
+.slides img:hover {
+transform: scale(1.05);
+box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Slide Animation */
+@keyframes slideIn {
+from {
+    opacity: 0;
+    transform: translateX(50px);
+}
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+.slides div {
+animation: slideIn 0.5s ease forwards;
+}
+
+/* Delay the animation for each child */
+.slides div:nth-child(1) { animation-delay: 0s; }
+.slides div:nth-child(2) { animation-delay: 0.2s; }
+.slides div:nth-child(3) { animation-delay: 0.4s; }
+.slides div:nth-child(4) { animation-delay: 0.6s; }
+.slides div:nth-child(5) { animation-delay: 0.8s; }
+.slides div:nth-child(6) { animation-delay: 1s; }
+.slides div:nth-child(7) { animation-delay: 1.2s; }
+.slides div:nth-child(8) { animation-delay: 1.4s; }
+
+.donate {
+padding: 20px 10px;
+}
+
+.donate h2 {
+font-size: 1.5rem;
+}
+
+.donate p {
+font-size: 1rem;
+}
+
+.donate button {
+font-size: 1rem;
+padding: 8px 16px;
+}
+}
+
+@media (max-width: 480px) {
+nav {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.slides {
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+padding: 15px;
+}
+
+.slides img {
+width: 100%;
+max-width: 150px; /* Adjust the width for mobile devices */
+}
+
+
+.donate h2 {
+font-size: 1.2rem;
+}
+
+.donate p {
+font-size: 0.9rem;
+}
+
+.donate button {
+font-size: 0.9rem;
+padding: 8px 14px;
+}
+}
