@@ -1,29 +1,37 @@
 # IMPACT DONATE project
-# IMPACT_DONATE Project
-ImpactDonate
+
+
 **Introduction**
 ImpactDonate is a platform that leverages Bitcoin and the Lightning Network (LND) to facilitate fast and effective transactions for charitable organizations. Our mission is to make donations seamless, transparent, and secure, helping to maximize the impact of every contribution.
-**
-**Features****
-Fast Transactions: Utilizing Bitcoin and LND for near-instantaneous transfers.
 
-Low Fees: Minimize transaction costs to ensure more of each donation goes directly to the cause.
+**Features**
 
-Transparency: Blockchain technology ensures all transactions are verifiable and transparent.
 
-Security: Advanced cryptographic protocols to protect donor information and funds.
+*_*Fast Transactions*_*: Utilizing Bitcoin and LND for near-instantaneous transfers.
 
-Installation
+
+_Low Fees_: Minimize transaction costs to ensure more of each donation goes directly to the cause.
+
+
+_Transparency_: Blockchain technology ensures all transactions are verifiable and transparent.
+
+
+_Security:_ Advanced cryptographic protocols to protect donor information and funds.
+
+
+**Installation**
+
+
 To get started with ImpactDonate, follow these steps:
 
 Clone the repository:
 
 bash
-git clone https://github.com/yourusername/ImpactDonate.git
+git clone https://github.com/Floyce/IMPACT_DONATE.git
 Navigate to the project directory:
 
 bash
-cd ImpactDonate
+cd IMAPCTDONATE
 Install dependencies:
 
 bash
@@ -41,7 +49,9 @@ bash
 npm start
 Access the platform via your web browser at http://localhost:3000.
 
-Follow the on-screen instructions to create an account and start making donations.
+
+**_Follow the on-screen instructions to create an account and start making donations._**
+
 
 Contribution
 We welcome contributions from the community! To contribute:
@@ -63,7 +73,9 @@ git push origin feature/your-feature-name
 Open a pull request on GitHub.
 
 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Contact
+
 For any inquiries or support, please contact us at shitandifloyce04@gmail.com
