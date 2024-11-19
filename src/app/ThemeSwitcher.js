@@ -1,4 +1,4 @@
-// src/components/ThemeSwitcher.jsx
+
 import React from 'react';
 import { Switch } from 'antd';
 import { loadTheme } from 'vite-plugin-theme/es/client';
