@@ -2,6 +2,8 @@
 
 
 **Introduction**
+
+
 ImpactDonate is a platform that leverages Bitcoin and the Lightning Network (LND) to facilitate fast and effective transactions for charitable organizations. Our mission is to make donations seamless, transparent, and secure, helping to maximize the impact of every contribution.
 
 **Features**
@@ -42,8 +44,8 @@ Create a .env file in the root directory.
 
 Add necessary environment variables (e.g., Bitcoin node, LND credentials).
 
-Usage
-Start the application:
+**Usage Start the application:**
+
 
 bash
 npm start
@@ -53,7 +55,9 @@ Access the platform via your web browser at http://localhost:3000.
 **_Follow the on-screen instructions to create an account and start making donations._**
 
 
-Contribution
+**Contribution**
+
+
 We welcome contributions from the community! To contribute:
 
 Fork the repository.
