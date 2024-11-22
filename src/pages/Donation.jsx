@@ -1,15 +1,36 @@
 
 import React from 'react';
-import { Form, Input, Button, Typography } from 'antd';
+import { Form, Input, Button, Typography, Layout, Menu, Image } from 'antd';
 
 const { Title, Paragraph } = Typography;
+const { Header, Content, Footer } = Layout;
 
 const Donation = () => {
   const onFinish = (values) => {
     console.log('Form values:', values);
   };
+  const handleMenuClick = (e) => {
+    console.log(e);
+
+    if (e.key === "home") {
+        navigate(`/`, {
+            // state: { module: record },
+        });
+    } else if (e.key === "charities") {
+        navigate(`/charities`, {
+            // state: { record },
+        });
+    } else if (e.key === "donation") {
+        navigate(`/donation`, {
+            // state: { record },
+        });
+    }
+};
 
   return (
+    <>
+    <Layout>
+    
     <div style={{ padding: '50px', backgroundColor: '#f8f8f8' }}>
       <Title level={2} style={{ textAlign: 'center', color: '#4a4a4a' }}>
         Donate Now
@@ -49,6 +70,13 @@ const Donation = () => {
         </Form>
       </div>
     </div>
+    
+</Layout>
+    </>
+    
+
+
+    
   );
 };
 

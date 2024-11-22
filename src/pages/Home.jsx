@@ -10,41 +10,34 @@ import {
 	Col,
 	Card,
 } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const { Header, Content, Footer } = Layout;
 const { Title, Paragraph } = Typography;
 
 function Home() {
+	const navigate = useNavigate();
+
+	const handleMenuClick = (e) => {
+		console.log(e);
+
+		if (e.key === "home") {
+			navigate(`/`, {
+				// state: { module: record },
+			});
+		} else if (e.key === "charities") {
+			navigate(`/charities`, {
+				// state: { record },
+			});
+		} else if (e.key === "donation") {
+			navigate(`/donation`, {
+				// state: { record },
+			});
+		}
+	};
 	return (
 		<Layout style={{ minHeight: "100vh", backgroundColor: "#f5f5f5" }}>
 			{/* Header with Logo and Navbar */}
-			<Header
-				style={{
-					display: "flex",
-					alignItems: "center",
-					backgroundColor: "#002B36",
-					padding: "0 20px",
-				}}
-			>
-				<Image
-					src="/src/assets/impact-donate-logo.png"
-					alt="Logo"
-					width={60}
-					preview={false}
-					style={{ marginRight: "60px", borderRadius: "50%" }}
-				/>
-				<Menu
-					theme="dark"
-					mode="horizontal"
-					defaultSelectedKeys={["1"]}
-					style={{ flex: 1, fontWeight: "bold", fontSize: "16px" }}
-					items={[
-						{ key: "1", label: "Home" },
-						{ key: "2", label: "Charities" },
-						{ key: "3", label: "Donation" },
-					]}
-				/>
-			</Header>
 
 			{/* Main Content */}
 			<Content
@@ -75,6 +68,7 @@ function Home() {
 								shaping the future of technology.
 							</Paragraph>
 							<Button
+								 onClick={() => navigate("/charities")} 
 								type="primary"
 								size="large"
 								style={{
@@ -88,8 +82,8 @@ function Home() {
 						</Col>
 						<Col xs={24} md={12}>
 							<Image
-                            width={240}
-								src="src/assets/img8.jpg"
+								width={240}
+								src="src/assets/home-page-pic.png"
 								alt="Innovation Illustration"
 								preview={false}
 								style={{ borderRadius: "8px" }}
@@ -168,19 +162,6 @@ function Home() {
 					</Row>
 				</div>
 			</Content>
-
-			{/* Footer */}
-			<Footer
-				style={{
-					textAlign: "center",
-					backgroundColor: "#002B36",
-					color: "#fff",
-					padding: "20px",
-				}}
-			>
-				Impact Donate ©{new Date().getFullYear()} - Empowering
-				Developers Worldwide
-			</Footer>
 		</Layout>
 	);
 }
